@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="javax.mail3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/javax.mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/activation-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

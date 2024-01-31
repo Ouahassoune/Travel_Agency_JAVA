@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="activation-1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/activation-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/javax.mail.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/MasterGameEngine" />
+      <root url="file://$PROJECT_DIR$/MasterGameEngine/src" />
+    </SOURCES>
+  </library>
+</component>

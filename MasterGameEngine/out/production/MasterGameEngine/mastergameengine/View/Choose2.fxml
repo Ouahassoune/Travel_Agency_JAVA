@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ChooseController">
+   <left>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="80.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="8.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="close-btn" />
+            <Label layoutX="31.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="max-btn" />
+            <Label layoutX="97.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" />
+            <Label layoutX="54.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="min-btn" />
+            <JFXButton blendMode="LIGHTEN" ellipsisString="" layoutX="2.0" layoutY="196.0" prefHeight="76.0" prefWidth="74.0" styleClass="sidebar-btn">
+               <effect>
+                  <Reflection />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                     <image>
+                        <Image url="@../../icons/icons8-user-94%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton ellipsisString="" layoutX="9.0" layoutY="342.0" prefHeight="42.0" prefWidth="37.0" styleClass="sidebar-btn">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/icons8-booking-94.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton ellipsisString="" layoutX="5.0" layoutY="280.0" prefHeight="58.0" prefWidth="65.0" styleClass="sidebar-btn">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="68.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                     <image>
+                        <Image url="@../../icons/bubble-gum-paper-plane.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="19.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-setting-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="14.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+               <image>
+                  <Image url="@../../icons/icons8-line-filled-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="16.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-technical-support-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="123.0" layoutX="-12.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Street%20App%20Location%20Itinerary.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="128.0" fitWidth="134.0" layoutX="-27.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Street%20App%20Location%20Itinerary%20Logo%20.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <StackPane fx:id="mainStackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="80.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+      <Pane prefHeight="700.0" prefWidth="658.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="738.0" fitWidth="951.0" layoutX="-6.0" layoutY="-38.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/illustration-cartes-1.png" />
+               </image>
+            </ImageView>
+            <HBox fx:id="billetsContainer" alignment="CENTER_LEFT" layoutX="44.0" layoutY="185.0" prefHeight="480.0" prefWidth="664.0" styleClass="white-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <ScrollPane prefHeight="480.0" prefWidth="670.0">
+                     <content>
+                        <GridPane fx:id="billetsGrid">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="714.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/icons8-user-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="877.0" layoutY="21.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/6827566-icone-fleche-vers-le-bas-signe-symbole-logo-vectoriel.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="670.0" layoutY="15.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/icons8-bell-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="167.0" fitWidth="207.0" layoutX="-8.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Street%20App%20Location%20Itinerary%20Logo%20%20(H1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="815.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-youtube-750.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="849.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-facebook-750.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="883.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-instagram-750.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="749.0" layoutY="21.0" text="Youssef Ouahassoune" textFill="#4f4d4d">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="190.0" layoutY="98.0" prefHeight="73.0" prefWidth="542.0" styleClass="white-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label textFill="#4f4d4d">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="61.0" fitWidth="478.0" layoutX="223.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Group%2010.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="214.0" layoutY="148.0" prefHeight="17.0" prefWidth="117.0" text="Recherche" textAlignment="CENTER" textFill="#4b43da">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="148.0" prefHeight="17.0" prefWidth="117.0" text="Mon voyage" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="445.0" layoutY="149.0" prefHeight="17.0" prefWidth="117.0" text="Hotel" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="545.0" layoutY="149.0" prefHeight="17.0" prefWidth="117.0" text="Validation" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="655.0" layoutY="148.0" prefHeight="17.0" prefWidth="117.0" text="Payment" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton ellipsisString="" layoutX="56.0" layoutY="68.0" onAction="#handleRetour" prefHeight="67.0" prefWidth="53.0">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/icons8-left-94.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Button fx:id="continueButton" alignment="TOP_CENTER" layoutX="744.0" layoutY="593.0" mnemonicParsing="false" onAction="#handleContinueButtonClick" prefHeight="40.0" prefWidth="150.0" styleClass="botton" text="Button" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </Pane>
+      </StackPane>
+   </center>
+
+</BorderPane>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="json-202310132">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/json-20231013.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/activation-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/javax.mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/jxmapviewer2-2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ValidationController">
+   <left>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="80.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="closebtn" layoutX="8.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="close-btn" />
+            <Label layoutX="31.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="max-btn" />
+            <Label layoutX="97.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" />
+            <Label layoutX="54.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="min-btn" />
+            <JFXButton blendMode="LIGHTEN" ellipsisString="" layoutX="2.0" layoutY="196.0" onAction="#gohistory" prefHeight="76.0" prefWidth="74.0" styleClass="sidebar-btn">
+               <effect>
+                  <Reflection />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                     <image>
+                        <Image url="@../../icons/icons8-user-94%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton ellipsisString="" layoutX="9.0" layoutY="342.0" prefHeight="42.0" prefWidth="37.0" styleClass="sidebar-btn">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/icons8-booking-94.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton ellipsisString="" layoutX="5.0" layoutY="280.0" onAction="#goFirstPage" prefHeight="58.0" prefWidth="65.0" styleClass="sidebar-btn">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="68.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                     <image>
+                        <Image url="@../../icons/bubble-gum-paper-plane.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="19.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-setting-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="14.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+               <image>
+                  <Image url="@../../icons/icons8-line-filled-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="16.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-technical-support-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="128.0" fitWidth="134.0" layoutX="-27.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Street%20App%20Location%20Itinerary%20Logo%20.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="11.0" layoutY="417.0" onAction="#initializeWebViewy">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/icons8-signpost-94.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane fx:id="contentPanex" prefHeight="700.0" prefWidth="658.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="738.0" fitWidth="951.0" layoutX="-6.0" layoutY="-38.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/illustration-cartes-1.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_LEFT" layoutX="68.0" layoutY="178.0" prefHeight="478.0" prefWidth="376.0" styleClass="white-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </HBox>
+            <HBox layoutX="65.0" layoutY="234.0" prefHeight="31.0" prefWidth="258.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="91.0" layoutY="189.0" prefHeight="146.0" prefWidth="342.0" styleClass="move-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </HBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="714.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/icons8-user-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="877.0" layoutY="21.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/6827566-icone-fleche-vers-le-bas-signe-symbole-logo-vectoriel.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="670.0" layoutY="15.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/icons8-bell-94.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="167.0" fitWidth="207.0" layoutX="-8.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Street%20App%20Location%20Itinerary%20Logo%20%20(H1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="815.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-youtube-750.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="849.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-facebook-750.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="883.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-instagram-750.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="usernameLabel" layoutX="749.0" layoutY="21.0" text="Youssef Ouahassoune" textFill="#4f4d4d">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="190.0" layoutY="64.0" prefHeight="73.0" prefWidth="542.0" styleClass="white-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label textFill="#4f4d4d">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="48.0" fitWidth="518.0" layoutX="224.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Group%2012%20(2).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="214.0" layoutY="114.0" prefHeight="17.0" prefWidth="117.0" text="Recherche" textAlignment="CENTER" textFill="#4b43da">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="114.0" prefHeight="17.0" prefWidth="117.0" text="Mon voyage" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="445.0" layoutY="115.0" prefHeight="17.0" prefWidth="117.0" text="Hotel" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="545.0" layoutY="115.0" prefHeight="17.0" prefWidth="117.0" text="Validation" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="655.0" layoutY="114.0" prefHeight="17.0" prefWidth="117.0" text="Payment" textAlignment="CENTER" textFill="#bda7ef">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton ellipsisString="" layoutX="392.0" layoutY="208.0" prefHeight="32.0" prefWidth="36.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/icons8-edit-50%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="dateLabel" layoutX="148.0" layoutY="205.0" text="dateLabel" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="villedLabel" layoutX="137.0" layoutY="239.0" text="villedLabel" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="villeaLabel" layoutX="276.0" layoutY="238.0" text="villeaLabel" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="223.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-next-100.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nbrv" layoutX="133.0" layoutY="279.0" text="nbrv" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="304.0" text="Air France" textFill="#fbf313">
+               <font>
+                  <Font name="Calibri Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="prixLabel" layoutX="326.0" layoutY="303.0" text="prixLabel" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="49.0" layoutX="102.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-plane-100.png" />
+               </image>
+            </ImageView>
+            <JFXButton ellipsisString="" layoutX="66.0" layoutY="78.0" onAction="#handleRetour" prefHeight="67.0" prefWidth="53.0">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/icons8-left-94.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <HBox alignment="CENTER_LEFT" layoutX="92.0" layoutY="364.0" prefHeight="146.0" prefWidth="342.0" styleClass="move-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </HBox>
+            <Label fx:id="villex" layoutX="141.0" layoutY="374.0" text="ville" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="typex" layoutX="145.0" layoutY="473.0" text="type" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="102.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-booking-94.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="hotellx" layoutX="141.0" layoutY="404.0" text="hotell" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="hotelnbretoilex" layoutX="144.0" layoutY="441.0" text="hotelnbretoile" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="37.0" layoutX="97.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-bed-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="102.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-etoile-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="102.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-door-hanger-100.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="pricex" layoutX="333.0" layoutY="477.0" text="price" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="302.0" layoutY="475.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-price-tag-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="295.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-price-tag-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="102.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-expedia-48.png" />
+               </image>
+            </ImageView>
+            <JFXButton ellipsisString="" layoutX="386.0" layoutY="376.0" prefHeight="32.0" prefWidth="36.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/icons8-edit-50%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <HBox fx:id="contentPane" alignment="CENTER_LEFT" layoutX="453.0" layoutY="159.0" prefHeight="499.0" prefWidth="435.0" styleClass="white-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </HBox>
+            <Button alignment="TOP_CENTER" layoutX="591.0" layoutY="610.0" mnemonicParsing="false" onAction="#initializeWebViewx" prefHeight="40.0" prefWidth="150.0" styleClass="botton" text="Pay Now" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Button>
+
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

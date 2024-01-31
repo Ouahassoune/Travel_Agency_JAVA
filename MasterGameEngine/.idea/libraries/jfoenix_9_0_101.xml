@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jfoenix-9.0.101">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Admin/dist/jfoenix-9.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/Admin/dist/jfoenix-9.0.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

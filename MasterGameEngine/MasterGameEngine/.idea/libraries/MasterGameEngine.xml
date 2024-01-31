@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MasterGameEngine">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/MasterGameEngine.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

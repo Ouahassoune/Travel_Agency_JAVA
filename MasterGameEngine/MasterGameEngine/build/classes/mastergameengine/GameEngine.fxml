@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastergameengine.Controller.GameEngineController">
+   <left>
+      <VBox prefHeight="698.0" prefWidth="89.0" style="-fx-background-color: #ffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#menu" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-squared-menu-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-menu-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/timer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-life-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/wineer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="196.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-bookmark.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="306.0" mnemonicParsing="false" onAction="#add" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-add-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="210.0" />
+               </VBox.margin>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#close" prefHeight="55.0" prefWidth="89.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-toggl-app-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="699.0" prefWidth="875.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutY="1.0" prefHeight="697.0" prefWidth="246.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="48.0" layoutY="39.0" prefHeight="26.0" prefWidth="74.0" text="Your Profile">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button contentDisplay="GRAPHIC_ONLY" layoutX="190.0" layoutY="30.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="42.0" stylesheets="@../../style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-refresh-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="91.0" fitWidth="129.0" layoutX="68.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-akinator-game-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="76.0" layoutY="223.0" prefHeight="26.0" prefWidth="74.0" text="ELON MASK">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="243.0" prefHeight="26.0" prefWidth="74.0" text="Player Rank">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="132.0" layoutY="243.0" prefHeight="26.0" prefWidth="57.0" text="200.762" textFill="#0c30cf">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="73.0" layoutY="269.0" prefHeight="26.0" prefWidth="98.0" text="10.18% of Top" textFill="#131313">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="42.0" fitWidth="59.0" layoutX="61.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-rank-50.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="117.0" layoutY="385.0" prefHeight="26.0" prefWidth="74.0" text="77" textFill="#4712e7">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="118.0" layoutY="401.0" prefHeight="26.0" prefWidth="74.0" text="Win Games">
+                     <font>
+                        <Font name="Century Gothic" size="10.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="57.0" fitWidth="71.0" layoutX="53.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/person2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="118.0" layoutY="456.0" prefHeight="26.0" prefWidth="74.0" text="12" textFill="#4712e7">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="472.0" prefHeight="26.0" prefWidth="74.0" text="Skin Faces">
+                     <font>
+                        <Font name="Century Gothic" size="10.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="57.0" fitWidth="71.0" layoutX="53.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-akinator-game-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="118.0" layoutY="526.0" prefHeight="26.0" prefWidth="74.0" text="564.44" textFill="#4712e7">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="542.0" prefHeight="26.0" prefWidth="74.0" text="Points">
+                     <font>
+                        <Font name="Century Gothic" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField layoutX="273.0" layoutY="22.0" prefHeight="42.0" prefWidth="371.0" promptText="Search campians here" />
+            <ImageView fitHeight="34.0" fitWidth="41.0" layoutX="598.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/search.png" />
+               </image>
+            </ImageView>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="803.0" layoutY="26.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="42.0" stylesheets="@../../style.css" text="Button" textFill="#19439e">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-notification-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="863.0" layoutY="26.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="42.0" stylesheets="@../../style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-akinator-game-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="919.0" layoutY="29.0" prefHeight="26.0" prefWidth="74.0" text="ELON MASK">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="919.0" layoutY="42.0" prefHeight="26.0" prefWidth="126.0" text="ELONMASK@GMAIL.COM">
+               <font>
+                  <Font name="Century Gothic" size="9.0" />
+               </font>
+            </Label>
+            <Pane layoutX="273.0" layoutY="87.0" prefHeight="142.0" prefWidth="232.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="12.0" layoutY="14.0" prefHeight="26.0" prefWidth="95.0" text="Current Rank">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="78.0" prefHeight="26.0" prefWidth="95.0" text="Plat 5" textFill="#1b690a">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="93.0" prefHeight="26.0" prefWidth="95.0" text="18 LP" textFill="#1b690a">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="14.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-double-up-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="87.0" fitWidth="82.0" layoutX="144.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-rank-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="516.0" layoutY="87.0" prefHeight="142.0" prefWidth="232.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="12.0" layoutY="14.0" prefHeight="26.0" prefWidth="95.0" text="Champian">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="78.0" prefHeight="26.0" prefWidth="95.0" text="Bilgate" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="93.0" prefHeight="26.0" prefWidth="124.0" text="The sheperd of Souls" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="87.0" fitWidth="82.0" layoutX="144.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/champian.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="798.0" layoutY="87.0" prefHeight="142.0" prefWidth="246.0" style="-fx-background-color: #19439e; -fx-background-color: ;">
+               <children>
+                  <Label layoutX="12.0" layoutY="14.0" prefHeight="26.0" prefWidth="95.0" text="Topt Rank" textFill="#fafafa">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="71.0" prefHeight="26.0" prefWidth="95.0" text="Top" textFill="#fafafa">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="86.0" prefHeight="26.0" prefWidth="124.0" text="The sheperd of Souls" textFill="#fafafa">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="87.0" fitWidth="82.0" layoutX="144.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/favatraite%20star.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="273.0" layoutY="247.0" prefHeight="26.0" prefWidth="95.0" text="Summary">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="389.0" layoutY="243.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="118.0" styleClass="button_2" stylesheets="@../../style.css" text="Ranked" />
+            <Button layoutX="511.0" layoutY="243.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="118.0" styleClass="button_2" stylesheets="@../../style.css" text="Normal" />
+            <Button layoutX="636.0" layoutY="243.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="118.0" styleClass="button_2" stylesheets="@../../style.css" text="07-08-2023" />
+            <ImageView fitHeight="20.0" fitWidth="26.0" layoutX="731.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-arrow-50%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="26.0" layoutX="639.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-arrow-50.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="273.0" layoutY="278.0" prefHeight="168.0" prefWidth="232.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="56.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-double-up-50.png" />
+                     </image>
+                  </ImageView>
+                  <Circle fill="#fdfeff" layoutX="116.0" layoutY="63.0" radius="49.0" stroke="DODGERBLUE" strokeLineJoin="ROUND" strokeType="INSIDE" />
+                  <Label layoutX="95.0" layoutY="44.0" prefHeight="39.0" prefWidth="40.0" text="55">
+                     <font>
+                        <Font name="Century Gothic Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="135.0" layoutY="43.0" prefHeight="39.0" prefWidth="24.0" text="\%">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="85.0" layoutY="120.0" prefHeight="26.0" prefWidth="31.0" text="Win">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="143.0" layoutY="120.0" prefHeight="26.0" prefWidth="48.0" text="Loses">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="115.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-double-down-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="69.0" layoutY="60.0" prefHeight="26.0" prefWidth="95.0" text="Current Rank">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="507.0" layoutY="278.0" prefHeight="168.0" prefWidth="284.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="156.0" fitWidth="283.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/chart.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="806.0" layoutY="247.0" prefHeight="26.0" prefWidth="95.0" text="Campare to">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="798.0" layoutY="278.0" prefHeight="168.0" prefWidth="245.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="52.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/champian.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="69.0" layoutY="19.0" prefHeight="26.0" prefWidth="95.0" text="Ronaldo">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="69.0" layoutY="32.0" prefHeight="26.0" prefWidth="95.0" text="Silver">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="164.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-double-down-50.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="193.0" layoutY="24.0" prefHeight="26.0" prefWidth="31.0" text="40%">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="52.0" fitWidth="48.0" layoutX="12.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/person1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="67.0" layoutY="65.0" prefHeight="26.0" prefWidth="95.0" text="Messy">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="67.0" layoutY="78.0" prefHeight="26.0" prefWidth="95.0" text="Diamand" textFill="#c12b2b">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="162.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-double-up-50.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="191.0" layoutY="70.0" prefHeight="26.0" prefWidth="31.0" text="60%">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="52.0" fitWidth="48.0" layoutX="12.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/person2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="67.0" layoutY="113.0" prefHeight="26.0" prefWidth="95.0" text="Stipher">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="67.0" layoutY="126.0" prefHeight="26.0" prefWidth="95.0" text="Gold" textFill="#0b23bc">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" layoutX="162.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-double-down-50.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="191.0" layoutY="118.0" prefHeight="26.0" prefWidth="31.0" text="45%">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="273.0" layoutY="456.0" prefHeight="238.0" prefWidth="769.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="95.0" text="Recent History">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="87.0" fitWidth="82.0" layoutX="21.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/champian.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="101.0" layoutY="76.0" prefHeight="26.0" prefWidth="95.0" text="Bilgate" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="101.0" layoutY="96.0" prefHeight="26.0" prefWidth="124.0" text="The sheperd of Souls" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="216.0" layoutY="79.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" styleClass="button_2" stylesheets="@../../style.css" text="2/5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="364.0" layoutY="68.0" prefHeight="26.0" prefWidth="31.0" text="KDA">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="364.0" layoutY="87.0" prefHeight="26.0" prefWidth="31.0" text="0.80">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="432.0" layoutY="67.0" prefHeight="26.0" prefWidth="31.0" text="Gold">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="432.0" layoutY="86.0" prefHeight="26.0" prefWidth="31.0" text="15.8k">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="485.0" layoutY="67.0" prefHeight="26.0" prefWidth="53.0" text="Milstons">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="485.0" layoutY="86.0" prefHeight="26.0" prefWidth="31.0" text="201">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="560.0" layoutY="70.0" prefHeight="26.0" prefWidth="85.0" text="Game timing">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="560.0" layoutY="89.0" prefHeight="26.0" prefWidth="86.0" text="1 Hours 4 Min">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="664.0" layoutY="71.0" prefHeight="26.0" prefWidth="31.0" text="Date">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="664.0" layoutY="90.0" prefHeight="26.0" prefWidth="89.0" text="07-08-2023">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="79.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/champian.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="127.0" layoutY="120.0" prefHeight="26.0" prefWidth="84.0" text="Elon Mask" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="127.0" layoutY="138.0" prefHeight="26.0" prefWidth="118.0" text=" Souls" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="216.0" layoutY="122.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" styleClass="button_2" stylesheets="@../../style.css" text="5/9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="364.0" layoutY="130.0" prefHeight="26.0" prefWidth="31.0" text="0.80">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="432.0" layoutY="129.0" prefHeight="26.0" prefWidth="31.0" text="15.8k">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="485.0" layoutY="129.0" prefHeight="26.0" prefWidth="31.0" text="201">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="560.0" layoutY="132.0" prefHeight="26.0" prefWidth="86.0" text="1 Hours 4 Min">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="664.0" layoutY="133.0" prefHeight="26.0" prefWidth="89.0" text="07-08-2023">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="79.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/champian.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="127.0" layoutY="168.0" prefHeight="26.0" prefWidth="84.0" text="Rondaldo" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="127.0" layoutY="186.0" prefHeight="26.0" prefWidth="118.0" text=" Souls" textFill="#2c2e2c">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="216.0" layoutY="170.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="52.0" styleClass="button_2" stylesheets="@../../style.css" text="2/7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="364.0" layoutY="178.0" prefHeight="26.0" prefWidth="31.0" text="0.80">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="432.0" layoutY="177.0" prefHeight="26.0" prefWidth="31.0" text="15.8k">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="485.0" layoutY="177.0" prefHeight="26.0" prefWidth="31.0" text="201">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="560.0" layoutY="180.0" prefHeight="26.0" prefWidth="86.0" text="1 Hours 4 Min">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="664.0" layoutY="181.0" prefHeight="26.0" prefWidth="89.0" text="07-08-2023">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

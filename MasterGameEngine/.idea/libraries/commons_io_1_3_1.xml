@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="commons-io-1.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/commons-io-1.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/graphhopper-0.8.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/xmlgraphics-commons-2.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/trove4j-3.0.3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/slf4j-api-1.7.21.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/protobuf-java-2.6.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/osmosis-osm-binary-0.44.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jar_files (10)/hppc-0.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

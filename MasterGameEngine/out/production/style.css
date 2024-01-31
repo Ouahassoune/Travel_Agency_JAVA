@@ -1,0 +1,79 @@
+.parent{
+
+    -fx-background-color: #FDFDFE;
+
+}
+.sidebar{
+    -fx-background-color: black;
+}
+.close-btn{
+    -fx-background-color: #FF6058;
+    -fx-background-radius: 100%;
+}
+.close-btn:hover{
+    -fx-background-color: red;
+    -fx-background-radius: 100%;
+}
+.min-btn{
+    -fx-background-color:#27CA41;
+    -fx-background-radius: 100%;
+}
+.min-btn:hover{
+    -fx-background-color:green;
+    -fx-background-radius: 100%;
+}
+.max-btn{
+    -fx-background-color:#FFBD2D;
+    -fx-background-radius: 100%;
+}
+.max-btn:hover{
+    -fx-background-color:yellow;
+    -fx-background-radius: 100%;
+}
+.sidebar-btns{
+    -fx-background-color:transparent;
+    -fx-background-radius: 5px;
+}
+.sidebar-btns:hover{
+    -fx-background-color:#FDFDFE;
+    -fx-background-radius: 5px;
+}
+.white-round-carts{
+    -fx-background-color:#fff;
+    -fx-background-radius: 10px;
+}
+.move-round-carts{
+    -fx-background-color:#4B43DA;
+    -fx-background-radius: 10px;
+}
+.tex-input{
+    -fx-text-fill:BLACK;
+    -fx-background-radius: 20px;
+    -fx-prompt-text-fill: #2a2727;
+}
+.sidebar-btn:hover{
+    -fx-background-color: #798ACB;
+    -fx-background-radius: 30px;
+}
+.rect-round{
+    -fx-background-radius: 20;
+    -fx-background-color:#A0B2C0 ;
+}
+.white-border{
+    -fx-border-color:#fff;
+    -fx-background-radius: 20;
+}
+.botton{
+    -fx-background-radius:20 ;
+    -fx-background-color:#303030 ;
+}
+/* styles.css */
+.selected-ticket {
+    -fx-background-color: lightblue;
+    /* Add other styles as needed */
+}
+
+.hovered-ticket {
+    -fx-background-color: lightgray;
+    /* Add other styles as needed */
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.showHotelsController">
+    <left>
+        <Pane cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="80.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="closebtn" layoutX="8.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="close-btn" />
+
+                <Label layoutX="31.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="max-btn" />
+                <Label layoutX="97.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" />
+                <Label fx:id="Reduce" layoutX="54.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="min-btn" />
+                <JFXButton blendMode="LIGHTEN" ellipsisString="" layoutX="2.0" layoutY="196.0" prefHeight="76.0" prefWidth="74.0" styleClass="sidebar-btn">
+                    <effect>
+                        <Reflection />
+                    </effect>
+                    <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                            <image>
+                                <Image url="@../../icons/icons8-user-94%20(1).png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton ellipsisString="" layoutX="9.0" layoutY="342.0" prefHeight="42.0" prefWidth="37.0" styleClass="sidebar-btn">
+                    <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../icons/icons8-booking-94.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton ellipsisString="" layoutX="5.0" layoutY="280.0" onAction="#goFirstPage" prefHeight="58.0" prefWidth="65.0" styleClass="sidebar-btn">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="68.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                            <image>
+                                <Image url="@../../icons/bubble-gum-paper-plane.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="19.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../icons/icons8-setting-94.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="14.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+                    <image>
+                        <Image url="@../../icons/icons8-line-filled-50.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="16.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../icons/icons8-technical-support-94.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="100.0" fitWidth="123.0" layoutX="-12.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../icons/Street%20App%20Location%20Itinerary.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="128.0" fitWidth="134.0" layoutX="-27.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../icons/Street%20App%20Location%20Itinerary%20Logo%20.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </left>
+   <right>
+        <Pane prefHeight="700.0" prefWidth="908.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="imageview" fitHeight="736.0" fitWidth="995.0" layoutX="-37.0" layoutY="-36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../../imagee/travel3.jpg" />
+               </image>
+                </ImageView>
+            <AnchorPane layoutX="89.0" layoutY="-7.0" prefHeight="708.0" prefWidth="694.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" layoutY="9.0" prefHeight="700.0" prefWidth="737.0" style="-fx-background-color: white;" vbarPolicy="NEVER">
+                     <content>
+                        <GridPane fx:id="cardlayout" prefHeight="698.0" prefWidth="105.0" style="-fx-background-color: white;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </AnchorPane>
+            <AnchorPane layoutX="-39.0" layoutY="-1.0" prefHeight="143.0" prefWidth="128.0" style="-fx-background-color: white;" />
+            <ImageView fx:id="petiticon" fitHeight="143.0" fitWidth="157.0" layoutX="-60.0" layoutY="5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../Controller/images/animation.gif" />
+               </image>
+            </ImageView>
+            </children>
+        </Pane>
+   </right>
+</BorderPane>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane  fx:id="root"  stylesheets="@../Resources/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.Controller.HotelController">
+
+    <AnchorPane layoutX="10.0" layoutY="40.0" prefHeight="60.0" prefWidth="300.0">
+        <TextField fx:id="searchTextField" prefHeight="30.0" prefWidth="275.0" promptText="Search" style="-fx-border-radius: 50px;-fx-border-color: #1b52a8; -fx-background-color: rgba(255,255,255,0);">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </TextField>
+        <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="242.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Resources/icons/icons8-search-64.png" />
+            </image>
+        </ImageView>
+    </AnchorPane>
+    <AnchorPane layoutX="10.0" layoutY="80.0" prefHeight="250.0" prefWidth="600.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <TableView fx:id="HotelTable" prefHeight="250.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="IdColumn" prefWidth="0.0" visible="false" />
+                <TableColumn fx:id="NameColumn" prefWidth="154.0" text="Name" />
+                <TableColumn fx:id="CityColumn" prefWidth="155.0" text="City" />
+                <TableColumn fx:id="StarsColumn" prefWidth="118.0" text="Stars" />
+                <TableColumn fx:id="PriceColumn" prefWidth="108.0" text="Price" />
+                <TableColumn fx:id="viewColumn" minWidth="0.0" prefWidth="32.0" />
+                <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="32.0" />
+            </columns>
+        </TableView>
+    </AnchorPane>
+
+          <AnchorPane layoutX="10.0" layoutY="350.0" prefHeight="250.0" prefWidth="600.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <children>
+            <Pane prefHeight="50.0" prefWidth="258.0" styleClass="Title-Pane" stylesheets="@../Resources/index.css">
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <children>
+                    <Label layoutX="29.0" layoutY="11.0" text="Add Hotel" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                </children>
+            </Pane>
+
+                  <Label layoutX="14.0" layoutY="58.0" styleClass="label-title" text="Name:" />
+            <TextField fx:id="AddHotelName" layoutX="73.0" layoutY="56.0" prefHeight="25.0" prefWidth="119.0" promptText="Hotel Name" />
+
+                  <Label layoutX="204.0" layoutY="58.0" styleClass="label-title" text="City:" />
+            <ComboBox fx:id="AddHotelCity" layoutX="254.0" layoutY="56.0" prefHeight="25.0" prefWidth="119.0" />
+
+                  <Label layoutX="15.0" layoutY="88.0" styleClass="label-title" text="Stars:" />
+            <TextField fx:id="AddHotelStars" layoutX="74.0" layoutY="86.0" prefHeight="25.0" prefWidth="119.0" promptText="Max 5" />
+
+                  <Label layoutX="205.0" layoutY="88.0" styleClass="label-title" text="Price:" />
+            <TextField fx:id="AddHotelPrice" layoutX="254.0" layoutY="86.0" prefHeight="25.0" prefWidth="119.0" promptText="Max Price" />
+
+                  <Label layoutX="14.0" layoutY="112.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Rooms" />
+            <AnchorPane layoutX="15.0" layoutY="131.0" prefHeight="2.0" prefWidth="54.0" style="-fx-background-color: #1b52a8;" />
+
+                  <CheckBox fx:id="RSimpleCheckBox" layoutX="20.0" layoutY="140.0" onAction="#handleCheckBoxAction" />
+            <Label layoutX="44.0" layoutY="140.0" styleClass="label-title" text="Simple:" />
+            <Label layoutX="125.0" layoutY="140.0" styleClass="label-title" text="N.Room" />
+            <TextField fx:id="AddHotelNRS" disable="true" layoutX="188.0" layoutY="138.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="264.0" layoutY="140.0" styleClass="label-title" text="Price" />
+            <TextField fx:id="AddHotelPSR" disable="true" layoutX="306.0" layoutY="138.0" prefHeight="25.0" prefWidth="67.0" />
+
+                  <CheckBox fx:id="RDoubleCheckBox" layoutX="20.0" layoutY="170.0" onAction="#handleCheckBoxAction" />
+            <Label layoutX="44.0" layoutY="170.0" styleClass="label-title" text="Double:" />
+            <Label layoutX="125.0" layoutY="170.0" styleClass="label-title" text="N.Room" />
+            <TextField fx:id="AddHotelNRD" disable="true" layoutX="188.0" layoutY="168.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="264.0" layoutY="170.0" styleClass="label-title" text="Price" />
+            <TextField fx:id="AddHotelPDR" disable="true" layoutX="306.0" layoutY="168.0" prefHeight="25.0" prefWidth="67.0" />
+
+                  <Label layoutX="14.0" layoutY="193.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Amenities" />
+            <AnchorPane layoutX="15.0" layoutY="212.0" prefHeight="2.0" prefWidth="77.0" style="-fx-background-color: #1b52a8;" />
+
+                  <CheckBox fx:id="MRCheckBox" layoutX="17.0" layoutY="221.0" onAction="#handleCheckBoxAction" />
+            <Label layoutX="44.0" layoutY="221.0" styleClass="label-title" text="Meeting Room" />
+
+                  <CheckBox fx:id="WifiCheckBox" layoutX="161.0" layoutY="221.0" onAction="#handleCheckBoxAction" />
+            <Label layoutX="185.0" layoutY="221.0" styleClass="label-title" text="Wifi" />
+
+                  <CheckBox fx:id="SpaCheckBox" layoutX="232.0" layoutY="221.0" onAction="#handleCheckBoxAction" />
+            <Label layoutX="255.0" layoutY="221.0" styleClass="label-title" text="Spa" />
+
+      
+                  <Label layoutX="395.0" layoutY="3.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Images" />
+            <AnchorPane layoutX="396.0" layoutY="22.0" prefHeight="2.0" prefWidth="77.0" style="-fx-background-color: #1b52a8;" />
+
+            <Button fx:id="uploadButton" alignment="CENTER" layoutX="555.0" layoutY="10.0" onAction="#uploadImage" prefHeight="20.0" prefWidth="25.0" styleClass="Add-image-btn" text="+" />
+
+            <TableView fx:id="ImageTable" layoutX="396.0" layoutY="38.0" prefHeight="149.0" prefWidth="185.0">
+                <columns>
+                    <TableColumn fx:id="pathImageColumn" prefWidth="154.0" text="Image" />
+                    <TableColumn fx:id="deleteImageColumn" minWidth="0.0" prefWidth="32.0" />
+                </columns>
+            </TableView>
+
+                  <Button layoutX="480.0" layoutY="202.0" onAction="#handleAddHotel" styleClass="button-action" text="Add" />
+
+        </children>
+    </AnchorPane>
+
+    <AnchorPane layoutX="630.0" layoutY="30.0" prefHeight="50.0" prefWidth="300.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <AnchorPane layoutX="0.0" prefHeight="50.0" prefWidth="100.0">
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../Resources/icons/icons8-time-96.png" />
+                </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="15.0" text="View" textFill="#4f4d4d">
+                <font>
+                    <Font name="Calibri Bold" size="15.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+    </AnchorPane>
+    <AnchorPane fx:id="viewPane" layoutX="630.0" layoutY="80.0" prefHeight="520.0" prefWidth="300.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <AnchorPane fx:id="detailedInfoPane" layoutX="6.0" layoutY="14.0" prefHeight="490.0" prefWidth="287.0">
+            <Label layoutX="20.0" layoutY="4.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="View" />
+            <AnchorPane layoutX="20.0" layoutY="33.0" prefHeight="2.0" prefWidth="246.0" style="-fx-background-color: #1b52a8;" />
+            <Label layoutX="20.0" layoutY="43.0" styleClass="label-title" text="Hotel Name :" />
+            <Label fx:id="NameLabel" layoutX="129.0" layoutY="45.0"/>
+            <Label layoutX="20.0" layoutY="67.0" styleClass="label-title" text="City:" />
+            <Label fx:id="CityLabel" layoutX="63.0" layoutY="69.0"/>
+            <Label layoutX="170.0" layoutY="67.0" styleClass="label-title" text="Stars:" />
+            <Label fx:id="StarsLabel" layoutX="226.0" layoutY="69.0"/>
+
+            <Label layoutX="21.0" layoutY="96.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Simple Rooms" />
+            <Label layoutX="20.0" layoutY="121.0" styleClass="label-title" text="N.Room:" />
+            <Label fx:id="NRSLabel" layoutX="91.0" layoutY="123.0"/>
+            <Label layoutX="170.0" layoutY="122.0" styleClass="label-title" text="Price:" />
+            <Label fx:id="PRSLabel" layoutX="220.0" layoutY="124.0"/>
+            <Label layoutX="20.0" layoutY="146.0" styleClass="label-title" text="N.Room Booked:" />
+            <Label fx:id="NRSBLabel" layoutX="152.0" layoutY="148.0"/>
+
+            <Label layoutX="20.0" layoutY="174.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Double Rooms" />
+            <Label layoutX="20.0" layoutY="196.0" styleClass="label-title" text="N.Room:" />
+            <Label fx:id="NRDLabel" layoutX="91.0" layoutY="198.0"/>
+            <Label layoutX="170.0" layoutY="197.0" styleClass="label-title" text="Price:" />
+            <Label fx:id="PRDLabel" layoutX="220.0" layoutY="199.0"/>
+            <Label layoutX="20.0" layoutY="221.0" styleClass="label-title" text="N.Room Booked:" />
+            <Label fx:id="NRDBLabel" layoutX="152.0" layoutY="223.0"/>
+
+            <Label layoutX="20.0" layoutY="246.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Amenities" />
+            <Pane fx:id="MRPane" layoutX="17.0" layoutY="266.0" prefHeight="40.0" prefWidth="149.0">
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons/meeting-room.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="50.0" layoutY="10.0" styleClass="label-title" text="Meeting Room" />
+            </Pane>
+            <Pane fx:id="WifiPane" layoutX="19.0" layoutY="304.0" prefHeight="40.0" prefWidth="78.0">
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons/wifi.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="48.0" layoutY="10.0" styleClass="label-title" text="Wifi" />
+            </Pane>
+            <Pane fx:id="SpaPane" layoutX="156.0" layoutY="304.0" prefHeight="40.0" prefWidth="75.0">
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons/spa.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="50.0" layoutY="10.0" styleClass="label-title" text="Spa" />
+            </Pane>
+
+
+            <Label layoutX="19.0" layoutY="348.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Images" />
+            <ImageView fx:id="imageView" fitHeight="142.0" fitWidth="194.0" layoutX="92.0" layoutY="348.0" preserveRatio="true" />
+        </AnchorPane>
+    </AnchorPane>
+
+
+
+    <stylesheets>
+        <URL value="@../Resources/index.css" />
+        <URL value="@../Resources/style.css" />
+    </stylesheets>
+</AnchorPane>

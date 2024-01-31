@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="java-map">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/java-map.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/graphhopper lib/jakarta.activation-api-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/commons-logging-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/jxmapviewer2-2.5.jar!/" />
+      <root url="file://$PROJECT_DIR$/MasterGameEngine/graphhopper lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/MasterGameEngine/graphhopper lib" recursive="false" />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jxmapviewer2-2.53">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MasterGameEngine/dist/lib/jxmapviewer2-2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

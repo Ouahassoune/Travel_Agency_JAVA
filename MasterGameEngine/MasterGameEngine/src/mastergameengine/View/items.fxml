@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="466.0" prefWidth="925.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.hotels1Controller">
+   <children>
+      <HBox layoutX="8.0" layoutY="-1.0" prefHeight="466.0" prefWidth="905.0" style="-fx-border-radius: 40; -fx-border-color: black; -fx-border-width: 3; -fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fillWidth="false" prefHeight="460.0" prefWidth="445.0" style="-fx-border-color: transparent;">
+               <children>
+                  <Label fx:id="nom" prefHeight="72.0" prefWidth="293.0" text="Welcom To Our Hotel Find your room Here" textFill="#4b43da" wrapText="true">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" top="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="desc" prefHeight="133.0" prefWidth="372.0" text="L'hôtel XYZ est une destination de premier choix pour les voyageurs en quête de luxe et de confort. Niché au cœur d'une oasis urbaine, cet établissement cinq étoiles offre une expérience incomparable" textFill="#5e5757" wrapText="true">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="details" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="12.0" prefWidth="111.0" style="-fx-background-color: #4B43DA; -fx-background-radius: 50; -fx-border-width: 2;" text="More Details" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" top="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <AnchorPane prefHeight="147.0" prefWidth="402.0">
+                     <children>
+                        <AnchorPane layoutX="30.0" layoutY="28.0" prefHeight="85.0" prefWidth="372.0" rotate="1.0" style="-fx-effect: dropshadow(gaussian, #4B43DA, 10, 0, 3, 9); -fx-background-color: white; -fx-background-radius: 30;">
+                           <children>
+                              <Label fx:id="nb_chambre" layoutX="40.0" layoutY="30.0" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 3, 3);" text="100+" textFill="#4b43da" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font name="System Bold" size="31.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="50.0" prefHeight="35.0" prefWidth="41.0" text="room" textFill="#5e5757" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prix" layoutX="162.0" layoutY="30.0" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 3, 3);" text="1000" textFill="#4b43da" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font name="System Bold" size="31.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="167.0" layoutY="65.0" prefHeight="25.0" prefWidth="76.0" text="min price" textFill="#5e5757" AnchorPane.leftAnchor="155.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="economieid" layoutX="281.0" layoutY="30.0" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 3, 3);;" text="20%" textFill="#4b43da" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font name="System Bold" size="31.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="256.0" layoutY="54.0" prefHeight="25.0" prefWidth="76.0" text="economic" textFill="#5e5757" AnchorPane.topAnchor="54.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                           <effect>
+                              <Shadow height="50.11" radius="17.2775">
+                                 <color>
+                                    <Color red="0.29411765933036804" green="0.26274511218070984" blue="0.8549019694328308" />
+                                 </color></Shadow>
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <ImageView fitHeight="195.0" fitWidth="311.0" pickOnBounds="true" preserveRatio="true" scaleX="1.4" scaleY="2.3" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 3, 3);" translateX="20.0" translateY="-6.0">
+               <HBox.margin>
+                  <Insets left="40.0" top="132.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../../../../../Downloads/imageToYoussef/imageToYoussef/hotel6.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: WHITE; -fx-background-radius: 100;" AnchorPane.leftAnchor="860.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/icons8-next-page-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

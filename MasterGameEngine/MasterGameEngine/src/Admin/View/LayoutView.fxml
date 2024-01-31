@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" styleClass="parent" stylesheets="@../Resources/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.Controller.LayoutController">
+    <left>
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="80.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="closebtn" layoutX="8.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#handleCloseBtnClick" prefHeight="13.0" prefWidth="13.0" styleClass="close-btn" />
+                <Label layoutX="31.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="max-btn" />
+                <Label layoutX="97.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" />
+                <Label layoutX="54.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="13.0" prefWidth="13.0" styleClass="min-btn" />
+
+                <JFXButton fx:id="dashboardBtn" ellipsisString="" layoutX="5.0" layoutY="200.0" prefHeight="65.0" prefWidth="65.0" styleClass="sidebar-btn">
+                    <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Resources/icons/dashboard.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="customerBtn" ellipsisString="" layoutX="5.0" layoutY="270.0" prefHeight="65.0" prefWidth="65.0" styleClass="sidebar-btn">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Resources/icons/user.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="transportBtn" ellipsisString="" layoutX="5.0" layoutY="340.0" prefHeight="65.0" prefWidth="65.0" styleClass="sidebar-btn">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                            <image>
+                                <Image url="@../Resources/icons/trasport.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="hotelBtn" ellipsisString="" layoutX="5.0" layoutY="410.0" prefHeight="65.0" prefWidth="65.0" styleClass="sidebar-btn">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" styleClass="sidebar-btn">
+                            <image>
+                                <Image url="@../Resources/icons/icons8-booking-94.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+
+                <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="19.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons/icons8-setting-94.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="14.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+                    <image>
+                        <Image url="@../Resources/icons/icons8-line-filled-50.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="16.0" layoutY="645.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons/icons8-technical-support-94.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="100.0" fitWidth="123.0" layoutX="-12.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons/Street%20App%20Location%20Itinerary.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="128.0" fitWidth="134.0" layoutX="-27.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons/Street%20App%20Location%20Itinerary%20Logo%20.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </left>
+
+    <center>
+        <Pane prefHeight="700.0" prefWidth="658.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="738.0" fitWidth="951.0" layoutX="-6.0" layoutY="-38.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../Resources/icons/illustration-cartes-1.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="714.0" layoutY="14.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../Resources/icons/icons8-user-94.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="802.0" layoutY="21.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../Resources/icons/6827566-icone-fleche-vers-le-bas-signe-symbole-logo-vectoriel.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="670.0" layoutY="15.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../Resources/icons/icons8-bell-94.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="749.0" layoutY="21.0" text="Admin" textFill="#4f4d4d">
+                    <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                    </font>
+                </Label>
+
+                <!--main page -->
+                <AnchorPane layoutX="2.0" layoutY="65.0" prefHeight="626.0" prefWidth="935.0">
+                    <VBox fx:id="contentVBox" />
+                </AnchorPane>
+                <!-- End main page -->
+
+
+
+            </children>
+        </Pane>
+    </center>
+
+
+</BorderPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="213.0" prefWidth="663.0">
+         <children>
+            <ImageView fitHeight="214.0" fitWidth="671.0" layoutX="-4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/Red%20Simple%20Boarding%20Pass%20Airlines%20Ticket%20(3).png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Dated" layoutX="182.0" layoutY="22.0" prefHeight="17.0" prefWidth="62.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNom" layoutX="96.0" layoutY="24.0" prefHeight="17.0" prefWidth="62.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="Prixb" layoutX="353.0" layoutY="158.0" prefHeight="17.0" prefWidth="62.0" text="Prix" textFill="#521ad4">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="departb" layoutX="111.0" layoutY="118.0" prefHeight="17.0" prefWidth="62.0" text="DEPART">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="arriveb" layoutX="298.0" layoutY="114.0" prefHeight="17.0" prefWidth="62.0" text="ARRIVE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="nbrv" layoutX="559.0" layoutY="88.0" prefHeight="17.0" prefWidth="62.0" text="nbrv">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="Typeb" layoutX="425.0" layoutY="136.0" prefHeight="17.0" prefWidth="62.0" text="Typeb">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="54.0" layoutY="139.0" prefHeight="66.0" prefWidth="82.0" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="white-round-carts">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <ImageView fx:id="randomImageView" fitHeight="59.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

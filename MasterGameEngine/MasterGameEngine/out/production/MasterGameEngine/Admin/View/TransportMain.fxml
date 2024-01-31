@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.Controller.TransportController">
+
+    <AnchorPane layoutX="10.0" layoutY="40.0" prefHeight="60.0" prefWidth="300.0">
+        <TextField fx:id="searchTextField" prefHeight="30.0" prefWidth="275.0" promptText="Search" style="-fx-border-radius: 50px;-fx-border-color: #1b52a8; -fx-background-color: rgba(255,255,255,0);">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </TextField>
+        <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="242.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Resources/icons/icons8-search-64.png" />
+            </image>
+        </ImageView>
+    </AnchorPane>
+    <AnchorPane layoutX="10.0" layoutY="80.0" prefHeight="250.0" prefWidth="600.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <TableView fx:id="TransportTable" prefHeight="250.0">
+            <columns>
+                <TableColumn fx:id="IdColumn" prefWidth="0.0" visible="false" />
+                <TableColumn fx:id="NameColumn" prefWidth="125.0" text="Transport Name" />
+                <TableColumn fx:id="DCColumn" prefWidth="130.0" text="Departure City" />
+                <TableColumn fx:id="ACColumn" prefWidth="130.0" text="Arrival City" />
+                <TableColumn fx:id="PrColumn" prefWidth="120.0" text="Price" />
+                <TableColumn fx:id="deleteColumn" prefWidth="31.0" />
+                <TableColumn fx:id="viewColumn" prefWidth="31.0" />
+                <TableColumn fx:id="updateColumn" prefWidth="31.0" />
+            </columns>
+        </TableView>
+    </AnchorPane>
+
+    <AnchorPane layoutX="10.0" layoutY="350.0" prefHeight="250.0" prefWidth="600.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+      <children>
+         <Pane prefHeight="50.0" prefWidth="258.0" styleClass="Title-Pane" stylesheets="@../Resources/index.css">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <children>
+               <Pane fx:id="foraddCity" layoutX="138.0" layoutY="4.0" onMouseClicked="#handleAddCityClick" prefHeight="40.0" prefWidth="100.0" styleClass="button-add-city" stylesheets="@../Resources/index.css">
+                  <children>
+                     <Label layoutX="17.0" layoutY="8.0" text="Add City" textAlignment="CENTER" textFill="#3471c6">
+                        <font>
+                           <Font name="System Bold" size="16.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="-110.0" layoutY="8.0" text="Citys" textAlignment="CENTER" textFill="WHITE">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+            </children>
+         </Pane>
+          <Pane layoutY="50.0" prefHeight="200.0" prefWidth="258.0">
+              <TableView fx:id="CityTable" layoutX="6.0" layoutY="4.0" prefHeight="193.0" prefWidth="247.0">
+                  <columns>
+                      <TableColumn fx:id="IdCityColumn" prefWidth="0.0" visible="false" />
+                      <TableColumn fx:id="NameCityColumn" prefWidth="155.0" text="City Name" />
+                      <TableColumn fx:id="deleteCityColumn" prefWidth="38.0" />
+                      <TableColumn fx:id="viewCityColumn" prefWidth="38.0" />
+                  </columns>
+              </TableView>
+          </Pane>
+          <Pane fx:id="addCityPane" layoutX="259.0" layoutY="6.0" prefHeight="242.0" prefWidth="338.0">
+              <children>
+                  <Label layoutX="27.0" layoutY="14.0" prefHeight="25.0" prefWidth="65.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Add City">
+                      <font>
+                          <Font size="18.0" />
+                      </font></Label>
+                  <AnchorPane layoutX="27.0" layoutY="40.0" prefHeight="2.0" prefWidth="246.0" style="-fx-background-color: #1b52a8;" />
+                  <Label layoutX="27.0" layoutY="64.0" styleClass="label-title" text="City Name:" />
+                  <TextField fx:id="CityNameTextField" layoutX="27.0" layoutY="90.0" prefHeight="25.0" prefWidth="246.0" promptText="Enter City Name" />
+                  <Button layoutX="215.0" layoutY="185.0" onAction="#addCity" styleClass="button-action" text="Add City" />
+              </children>
+          </Pane>
+          <Pane fx:id="staticCityPane" layoutX="259.0" layoutY="6.0" prefHeight="242.0" prefWidth="338.0" visible="false">
+              <children>
+                  <Label layoutX="27.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="City Statistic ">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                  </Label>
+                  <AnchorPane layoutX="27.0" layoutY="40.0" prefHeight="2.0" prefWidth="246.0" style="-fx-background-color: #1b52a8;" />
+                  <Label layoutX="27.0" layoutY="46.0" styleClass="label-title" text="City Name:" />
+                  <Label fx:id="detailedCityNameLabel" layoutX="115.0" layoutY="46.0"><font><Font size="13.0" /></font></Label>
+                  <BarChart fx:id="barChart" layoutX="5.0" layoutY="68.0" prefHeight="182.0" prefWidth="338.0">
+                      <xAxis>
+                          <CategoryAxis side="BOTTOM" />
+                      </xAxis>
+                      <yAxis>
+                          <NumberAxis side="LEFT" />
+                      </yAxis>
+                  </BarChart>
+              </children>
+          </Pane>
+      </children>
+    </AnchorPane>
+
+    <AnchorPane layoutX="630.0" layoutY="30.0" prefHeight="50.0" prefWidth="300.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <AnchorPane fx:id="foradd" layoutX="0.0" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #a19797;">
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../Resources/icons/icons8-time-96.png" />
+                </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="15.0" text="Add" textFill="#4f4d4d">
+                <font>
+                    <Font name="Calibri Bold" size="15.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane fx:id="forupdate" layoutX="100.0" prefHeight="50.0" prefWidth="100.0">
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../Resources/icons/icons8-ticket-48.png" />
+                </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="15.0" text="Update" textFill="#4f4d4d">
+                <font>
+                    <Font name="Calibri Bold" size="15.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane fx:id="forview" layoutX="200.0" prefHeight="50.0" prefWidth="100.0">
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../Resources/icons/icons8-ticket-48.png" />
+                </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="15.0" text="View" textFill="#4f4d4d">
+                <font>
+                    <Font name="Calibri Bold" size="15.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+    </AnchorPane>
+
+    <AnchorPane fx:id="addPane" layoutX="630.0" layoutY="80.0" prefHeight="520.0" prefWidth="300.0" styleClass="white-round-carts">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <AnchorPane layoutX="11.0" layoutY="10.0" prefHeight="31.0" prefWidth="130.0" style="-fx-background-radius: 50px; -fx-background-color: #1b52a8;">
+            <children>
+                <Button layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleGoButton" prefHeight="28.0" prefWidth="47.0" styleClass="Button_go" text="Go" />
+                <Button layoutX="50.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleRoundTripButton" prefHeight="28.0" prefWidth="78.0" styleClass="Button_round_trip" text="Round trip" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="pane1" layoutX="6.0" layoutY="50.0" prefHeight="454.0" prefWidth="287.0">
+            <Label layoutX="20.0" layoutY="20.0" styleClass="label-title" text="Transport Name:" />
+            <TextField fx:id="TrNameTextField1" layoutX="20.0" layoutY="45.0" prefHeight="25.0" prefWidth="246.0" promptText="Enter Transport Name" />
+            <CheckBox fx:id="PlaneCheckBox1" layoutX="20.0" layoutY="80.0" onAction="#handleCheckBoxAction1"/>
+            <Label layoutX="46.0" layoutY="79.0" styleClass="label-title" text="Plane" />
+            <CheckBox fx:id="CarCheckBox1" layoutX="105.0" layoutY="80.0" onAction="#handleCheckBoxAction1"/>
+            <Label layoutX="130.0" layoutY="79.0" styleClass="label-title" text="Car" />
+            <CheckBox fx:id="TrainCheckBox1" layoutX="186.0" layoutY="80.0" onAction="#handleCheckBoxAction1"/>
+            <Label layoutX="211.0" layoutY="79.0" styleClass="label-title" text="Train" />
+            <Label layoutX="20.0" layoutY="124.0" styleClass="label-title" text="Departure City:" />
+            <ComboBox fx:id="departureCityComboBox1" layoutX="138.0" layoutY="124.0" prefHeight="25.0" prefWidth="128.0" />
+            <Label layoutX="20.0" layoutY="159.0" styleClass="label-title" text="Arrival City:" />
+            <ComboBox fx:id="arrivalCityComboBox1" layoutX="138.0" layoutY="159.0" prefHeight="25.0" prefWidth="128.0" />
+            <Label layoutX="20.0" layoutY="194.0" styleClass="label-title" text="Departure Time:" />
+            <TextField fx:id="departureTimeTextField1" layoutX="138.0" layoutY="194.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+            <Label layoutX="20.0" layoutY="229.0" styleClass="label-title" text="Arrival Time:" />
+            <TextField fx:id="arrivalTimeTextField1" layoutX="138.0" layoutY="229.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+            <Label layoutX="20.0" layoutY="264.0" styleClass="label-title" text="Price:" />
+            <TextField fx:id="priceTextField1" layoutX="138.0" layoutY="264.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Price" />
+            <Label layoutX="20.0" layoutY="299.0" styleClass="label-title" text="Day:" />
+            <ComboBox fx:id="dayComboBox1" layoutX="138.0" layoutY="299.0" prefHeight="25.0" prefWidth="128.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Monday" />
+                        <String fx:value="Tuesday" />
+                        <String fx:value="Wednesday" />
+                        <String fx:value="Thursday" />
+                        <String fx:value="Friday" />
+                        <String fx:value="Saturday" />
+                        <String fx:value="Sunday" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <HBox />
+            <Button layoutX="173.0" layoutY="390.0" onAction="#addTrip" styleClass="button-action" text="Add Trip" />
+        </AnchorPane>
+        <AnchorPane fx:id="pane2" layoutX="6.0" layoutY="44.0" prefHeight="474.0" prefWidth="287.0" visible="false">
+            <Label layoutX="20.0" styleClass="label-title" text="Transport Name:" />
+            <TextField fx:id="TrNameTextField" layoutX="20.0" layoutY="23.0" prefHeight="25.0" prefWidth="246.0" promptText="Enter Transport Name" />
+            <CheckBox fx:id="PlaneCheckBox" layoutX="20.0" layoutY="58.0" onAction="#handleCheckBoxAction"/>
+            <Label layoutX="46.0" layoutY="57.0" styleClass="label-title" text="Plane" />
+            <CheckBox fx:id="CarCheckBox" layoutX="105.0" layoutY="58.0" onAction="#handleCheckBoxAction" />
+            <Label layoutX="130.0" layoutY="57.0" styleClass="label-title" text="Car" />
+            <CheckBox fx:id="TrainCheckBox" layoutX="186.0" layoutY="58.0" onAction="#handleCheckBoxAction"/>
+            <Label layoutX="211.0" layoutY="57.0" styleClass="label-title" text="Train" />
+            <Label layoutX="20.0" layoutY="78.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Go" />
+            <AnchorPane layoutX="21.0" layoutY="97.0" prefHeight="2.0" prefWidth="246.0" style="-fx-background-color: #1b52a8;" />
+            <Label layoutX="20.0" layoutY="105.0" styleClass="label-title" text="Departure City:" />
+            <ComboBox fx:id="departureCityComboBox" layoutX="138.0" layoutY="105.0" prefHeight="25.0" prefWidth="128.0" />
+            <Label layoutX="20.0" layoutY="134.0" styleClass="label-title" text="Arrival City:" />
+            <ComboBox fx:id="arrivalCityComboBox" layoutX="138.0" layoutY="134.0" prefHeight="25.0" prefWidth="128.0" />
+            <Label layoutX="20.0" layoutY="164.0" styleClass="label-title" text="Departure Time:" />
+            <TextField fx:id="departureTimeTextField" layoutX="138.0" layoutY="164.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+            <Label layoutX="20.0" layoutY="194.0" styleClass="label-title" text="Arrival Time:" />
+            <TextField fx:id="arrivalTimeTextField" layoutX="138.0" layoutY="194.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+            <Label layoutX="20.0" layoutY="223.0" styleClass="label-title" text="Price:" />
+            <TextField fx:id="priceTextField" layoutX="138.0" layoutY="223.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Price" />
+            <Label layoutX="20.0" layoutY="253.0" styleClass="label-title" text="Day:" />
+            <ComboBox fx:id="dayComboBox" layoutX="138.0" layoutY="253.0" prefHeight="25.0" prefWidth="128.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Monday" />
+                        <String fx:value="Tuesday" />
+                        <String fx:value="Wednesday" />
+                        <String fx:value="Thursday" />
+                        <String fx:value="Friday" />
+                        <String fx:value="Saturday" />
+                        <String fx:value="Sunday" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label layoutX="20.0" layoutY="274.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Router" />
+            <AnchorPane layoutX="21.0" layoutY="293.0" prefHeight="2.0" prefWidth="246.0" style="-fx-background-color: #1b52a8;" />
+            <Label layoutX="20.0" layoutY="301.0" styleClass="label-title" text="Departure Time:" />
+            <TextField fx:id="departureTimeTextFieldR" layoutX="138.0" layoutY="301.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+            <Label layoutX="20.0" layoutY="330.0" styleClass="label-title" text="Arrival Time:" />
+            <TextField fx:id="arrivalTimeTextFieldR" layoutX="138.0" layoutY="330.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+            <Label layoutX="20.0" layoutY="361.0" styleClass="label-title" text="Price:" />
+            <TextField fx:id="priceTextFieldR" layoutX="138.0" layoutY="361.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Price" />
+            <Label layoutX="20.0" layoutY="391.0" styleClass="label-title" text="Day:" />
+            <ComboBox fx:id="dayComboBoxR" layoutX="138.0" layoutY="391.0" prefHeight="25.0" prefWidth="128.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Monday" />
+                        <String fx:value="Tuesday" />
+                        <String fx:value="Wednesday" />
+                        <String fx:value="Thursday" />
+                        <String fx:value="Friday" />
+                        <String fx:value="Saturday" />
+                        <String fx:value="Sunday" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <HBox />
+            <Button layoutX="176.0" layoutY="423.0" onAction="#addTrip_R" styleClass="button-action" text="Add Trip" />
+        </AnchorPane>
+    </AnchorPane>
+
+    <AnchorPane fx:id="updatePane" layoutX="630.0" layoutY="80.0" prefHeight="520.0" prefWidth="300.0" styleClass="white-round-carts" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <AnchorPane layoutX="6.0" layoutY="14.0" prefHeight="490.0" prefWidth="287.0">
+   
+            <Label layoutX="20.0" layoutY="4.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="Update" />
+            <AnchorPane layoutX="20.0" layoutY="33.0" prefHeight="2.0" prefWidth="246.0" style="-fx-background-color: #1b52a8;" />
+
+            <Label layoutX="20.0" layoutY="65.0" styleClass="label-title" text="Transport Name:" />
+            <TextField fx:id="updateTrNameTextField" layoutX="20.0" layoutY="90.0" prefHeight="25.0" prefWidth="246.0" promptText="Enter Transport Name" />
+
+            <Label layoutX="20.0" layoutY="125.0" styleClass="label-title" text="Departure City:" />
+            <ComboBox fx:id="updatedepartureCityComboBox" layoutX="138.0" layoutY="125.0" prefHeight="25.0" prefWidth="128.0" />
+
+            <Label layoutX="20.0" layoutY="160.0" styleClass="label-title" text="Arrival City:" />
+            <ComboBox fx:id="updatearrivalCityComboBox" layoutX="138.0" layoutY="160.0" prefHeight="25.0" prefWidth="128.0" />
+
+            <Label layoutX="20.0" layoutY="195.0" styleClass="label-title" text="Departure Time:" />
+            <TextField fx:id="updatedepartureTimeTextField" layoutX="138.0" layoutY="195.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+
+            <Label layoutX="20.0" layoutY="230.0" styleClass="label-title" text="Arrival Time:" />
+            <TextField fx:id="updatearrivalTimeTextField" layoutX="138.0" layoutY="230.0" prefHeight="25.0" prefWidth="128.0" promptText="HH:mm" />
+
+            <Label layoutX="20.0" layoutY="265.0" styleClass="label-title" text="Price:" />
+            <TextField fx:id="updatepriceTextField" layoutX="138.0" layoutY="265.0" prefHeight="25.0" prefWidth="128.0" promptText="Enter Price" />
+
+            <Label layoutX="20.0" layoutY="300.0" styleClass="label-title" text="Day:" />
+            <ComboBox fx:id="updatedayComboBox" layoutX="138.0" layoutY="300.0" prefHeight="25.0" prefWidth="128.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Monday" />
+                        <String fx:value="Tuesday" />
+                        <String fx:value="Wednesday" />
+                        <String fx:value="Thursday" />
+                        <String fx:value="Friday" />
+                        <String fx:value="Saturday" />
+                        <String fx:value="Sunday" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <HBox />
+            <Button fx:id="updateButton" layoutX="173.0" layoutY="390.0" onAction="#handleUpdateTrip" styleClass="button-action" text="Save" />
+        </AnchorPane>
+    </AnchorPane>
+
+
+    <AnchorPane fx:id="viewPane" layoutX="630.0" layoutY="80.0" prefHeight="520.0" prefWidth="300.0" styleClass="white-round-carts" visible="false">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color red="0.7947368621826172" green="0.7432261109352112" blue="0.7432261109352112" />
+                </color>
+            </DropShadow>
+        </effect>
+        <AnchorPane fx:id="detailedInfoPane" layoutX="6.0" layoutY="14.0" prefHeight="490.0" prefWidth="287.0">
+
+            <Label layoutX="20.0" layoutY="4.0" style="-fx-text-fill: #1b52a8;" styleClass="label-title" text="View" />
+            <AnchorPane layoutX="20.0" layoutY="33.0" prefHeight="2.0" prefWidth="246.0" style="-fx-background-color: #1b52a8;" />
+
+            <Label layoutX="20.0" layoutY="65.0" styleClass="label-title" text="Transport Name:" />
+            <Label fx:id="detailedNameLabel" layoutX="138.0" layoutY="67.0" />
+
+            <Label layoutX="20.0" layoutY="98.0" styleClass="label-title" text="Departure City:" />
+            <Label fx:id="detailedDepCityLabel" layoutX="138.0" layoutY="100.0" />
+
+            <Label layoutX="20.0" layoutY="133.0" styleClass="label-title" text="Arrival City:" />
+            <Label fx:id="detailedArrCityLabel" layoutX="138.0" layoutY="135.0" />
+
+            <Label layoutX="20.0" layoutY="168.0" styleClass="label-title" text="Departure Time:" />
+            <Label fx:id="detailedDepTimeLabel" layoutX="138.0" layoutY="170.0" />
+
+            <Label layoutX="20.0" layoutY="203.0" styleClass="label-title" text="Arrival Time:" />
+            <Label fx:id="detailedArrTimeLabel" layoutX="138.0" layoutY="205.0" />
+
+            <Label layoutX="20.0" layoutY="238.0" styleClass="label-title" text="Price:" />
+            <Label fx:id="detailedPriceLabel" layoutX="138.0" layoutY="240.0" />
+
+            <Label layoutX="20.0" layoutY="273.0" styleClass="label-title" text="Day:" />
+            <Label fx:id="detailedDayLabel" layoutX="138.0" layoutY="275.0" />
+        </AnchorPane>
+    </AnchorPane>
+
+
+   <stylesheets>
+      <URL value="@../Resources/index.css" />
+      <URL value="@../Resources/style.css" />
+   </stylesheets>
+
+</AnchorPane>

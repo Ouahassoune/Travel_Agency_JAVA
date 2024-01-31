@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" prefHeight="208.0" styleClass="mainFxmlClass" prefWidth="291.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="Admin.Controller.ItemController">
+    <stylesheets>
+        <URL value="@../Resources/index.css" />
+    </stylesheets>
+    <children>
+        <Label fx:id="nameLabel" layoutX="27.0" layoutY="12.0" text="" textFill="#9a9a9a">
+            <font>
+                <Font name="Segoe UI Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="numberLabel" layoutX="153.0" layoutY="12.0" text="" textFill="#9a9a9a">
+            <font>
+                <Font name="Segoe UI Bold" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="237.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Resources/icons/icons8_Copy_48px.png" />
+            </image>
+        </ImageView>
+        <Separator layoutY="39.0" prefHeight="1.0" prefWidth="290.0" style="-fx-background-color: #fff;" />
+    </children>
+</AnchorPane>
